@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Function to calculate S(n)
+def S(n):
+    return (n * (n + 1) * (2 * n + 4)) / 6
+
+# Generate values for n
+n_values = np.arange(0, 10, 1)  # Adjust the range and step as needed
+
+# Calculate S(n) for each n
+S_values = [S(n) for n in n_values]
+
+# Plot the graph with discrete points and lines to x-axis
+plt.scatter(n_values, S_values, marker='o', color='b')
+plt.vlines(n_values, 0, S_values, colors='gray', linestyles='dashed')
+plt.title('Graph of S(n) = (n(n+1)(2n+4))/6')
+plt.xlabel('n')
+plt.ylabel('S(n)')
+plt.grid(True)
+plt.show()
