@@ -22,7 +22,7 @@ int main() {
         int y_value = y_n(n);
 
         sum+= x_value;
-        fprintf(file, "%d %d %d\n", n, x_value,y_value,);
+        fprintf(file, "%d %d %d\n", n, x_value,y_value);
     }
 
     fclose(file);
